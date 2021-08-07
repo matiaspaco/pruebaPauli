@@ -39,15 +39,19 @@ reject(error)
 }
 })
 
-//const prtTime = (mensaje,cl) => cl (mensaje,new Date().toLocaleDateString())
+const prtTime = (mensaje,cl) => cl (mensaje,new Date().toLocaleDateString())
 
 
 
 
 /*-----------------------test de la promesa---------------------------*/
 
-
+prtTime('inicio delay',console.warn)
 retardo(2000, 'Retardo de 2 seg de prueba')
-.then(rta => console.log(rta))
+.then(rta => {
+    console.log(rta)
+    prtTime('Fin delay', console.warn)
+})
+
 .catch(error => console.error(error))
 
