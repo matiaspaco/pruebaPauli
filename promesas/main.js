@@ -75,7 +75,7 @@ Promise.race([
 
 /*----------------Promese all-------------------------*/
 
-prtTime('Inicio delay', console.warn)
+/*prtTime('Inicio delay', console.warn)
 Promise.all([
     retardo(4000, 'retardo de 4 seg de prueba'),
     retardo(3000, 'retardo de 3 seg de prueba'),
@@ -88,6 +88,77 @@ Promise.all([
     prtTime('Fin delay', console.log)
 })
 .catch(error => console.error('error en carrera', error))
+
+/*--------------------------------------------------------*/
+
+console.log('\n/*3) Funciones constructoras')
+
+console.log('\n/*3.1) Analisis de una funcion en JS')
+
+/*-------------------------------------------------------*/
+
+console.log('\*3.1.a) Una funcion en JS es un Objeto*/')
+
+function foo(){
+    console.log('soy foo')
+}
+
+foo()
+
+foo.x = 'pau'
+foo.y = 'mati'
+foo.a = ' y pau'
+
+console.log(foo.x)
+console.log(foo.y)
+console.log(foo.y + ' ' + foo.a)
+
+console.log (foo)
+console.dir(foo)
+
+//--------------------------------------------------------
+console.log('n/* 3.1.b) Una funcion en JS es veriadica*/')
+
+//function suma(a=0, b=0){
+  /*  function suma(a,b){
+        console.log(a,b)
+        return (a||0) + (b||0)//operador short circuit : ||
+    }*/
+
+//resolver milti param cons REST Operator: ...
+function suma(...args){
+    console.log(args)
+    let suma = 0
+    args = 0
+    args.forEach(arg => suma += arg)
+    return suma
+}
+
+console.log(suma(5,6))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
